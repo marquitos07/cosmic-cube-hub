@@ -1,6 +1,6 @@
-
 import { Rocket, Satellite, Code } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [expandedTimelineItem, setExpandedTimelineItem] = useState<string | null>(null);
@@ -29,39 +29,39 @@ const Index = () => {
       {/* Features Grid */}
       <section className="section-padding">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div 
-            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/20" 
+          <Link 
+            to="/progress" 
+            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 hover:bg-white/20" 
             style={{ animationDelay: "100ms" }}
-            onClick={() => window.open("#", "_blank")}
           >
             <Rocket className="w-10 h-10 mb-4 text-space-accent" />
             <h3 className="text-xl font-semibold mb-2">Project Progress</h3>
             <p className="text-space-accent/80">
               Track our development milestones and upcoming objectives in real-time.
             </p>
-          </div>
-          <div 
-            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/20" 
+          </Link>
+          <Link 
+            to="/specs" 
+            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 hover:bg-white/20" 
             style={{ animationDelay: "200ms" }}
-            onClick={() => window.open("#", "_blank")}
           >
             <Satellite className="w-10 h-10 mb-4 text-space-accent" />
             <h3 className="text-xl font-semibold mb-2">Technical Specs</h3>
             <p className="text-space-accent/80">
               Detailed documentation of our CubeSat's technical specifications and capabilities.
             </p>
-          </div>
-          <div 
-            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/20" 
+          </Link>
+          <Link 
+            to="/code" 
+            className="glass p-6 rounded-lg animate-fade-up transform hover:scale-105 transition-all duration-300 hover:bg-white/20" 
             style={{ animationDelay: "300ms" }}
-            onClick={() => window.open("#", "_blank")}
           >
             <Code className="w-10 h-10 mb-4 text-space-accent" />
             <h3 className="text-xl font-semibold mb-2">Code Repository</h3>
             <p className="text-space-accent/80">
               Access our project's source code and contribute to its development.
             </p>
-          </div>
+          </Link>
         </div>
       </section>
 
