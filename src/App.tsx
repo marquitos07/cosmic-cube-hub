@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/cosmic-cube-hub">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/progress" element={<ProjectProgress />} />
