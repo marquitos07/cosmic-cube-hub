@@ -8,7 +8,12 @@ export default defineConfig(({ mode }) => ({
   base: "/cosmic-cube-hub/",
   build: {
     outDir: "dist",
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   },
   server: {
     host: "::",
